@@ -1,0 +1,103 @@
+.timeline-container {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.timeline-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.timeline-info .block-count {
+  color: #646cff;
+}
+
+.timeline {
+  position: relative;
+  min-height: 120px;
+  background-color: #242424;
+  border-radius: 8px;
+  padding: 3rem 1rem 1rem;
+  overflow-x: auto;
+}
+
+.timeline.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.empty-message {
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.time-ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.time-marker {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-left: 1px solid #444;
+  padding-left: 4px;
+}
+
+.time-marker span {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 80px;
+  align-items: center;
+}
+
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ff4444;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.playhead::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #ff4444;
+}

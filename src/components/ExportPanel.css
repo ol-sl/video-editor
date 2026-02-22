@@ -1,0 +1,177 @@
+.export-panel {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.api-badge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 12px;
+}
+
+.api-badge.fallback {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.export-settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.setting-group label {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.setting-group select {
+  padding: 0.6rem;
+  background-color: #242424;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.setting-group select:hover:not(:disabled) {
+  border-color: #646cff;
+}
+
+.setting-group select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.export-info {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #242424;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.export-progress {
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #646cff, #535abf);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.export-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-export,
+.btn-cancel {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-export {
+  background-color: #646cff;
+  color: white;
+}
+
+.btn-export:hover:not(:disabled) {
+  background-color: #535abf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.4);
+}
+
+.btn-export:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  background-color: #ff4444;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #cc0000;
+}
+
+.export-hint {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ffc107;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .export-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
